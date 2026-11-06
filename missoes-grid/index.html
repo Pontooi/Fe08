@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missões Grid — Tema 08</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    .hub { max-width: 960px; margin: 0 auto; }
+    .hub h1 { color: #fff; font-size: 1.5rem; margin-bottom: 6px; }
+    .hub .sub { color: #bfdbfe; margin-bottom: 20px; font-size: .95rem; }
+    .hub .lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .hub .item {
+      display: block;
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      text-decoration: none;
+      color: #0f172a;
+      box-shadow: 0 10px 26px rgba(0,0,0,.24);
+      border-left: 6px solid #2563eb;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .hub .item:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(0,0,0,.32); }
+    .hub .item strong { display: block; color: #1d4ed8; margin-bottom: 4px; }
+    .hub .item span { font-size: .86rem; color: #475569; }
+  </style>
+</head>
+<body class="p-hub">
+  <div class="hub">
+    <h1>🧪 Missões Grid</h1>
+    <p class="sub">Cinco missões curtas, uma coisa por vez. Abra cada uma na ordem.</p>
+
+    <div class="lista">
+      <a class="item" href="g1.html">
+        <strong>G1 · Primeiro Grid</strong>
+        <span>Duas colunas iguais com <code>1fr 1fr</code> e <code>gap: 12px</code>.</span>
+      </a>
+      <a class="item" href="g2.html">
+        <strong>G2 · Proporções <code>1fr 2fr</code></strong>
+        <span>Entenda a unidade <code>fr</code>: a 2ª coluna ocupa o dobro.</span>
+      </a>
+      <a class="item" href="g3.html">
+        <strong>G3 · Cabeçalho, conteúdo e rodapé</strong>
+        <span>Estrutura de página com <code>grid-template-rows: auto 1fr auto</code>.</span>
+      </a>
+      <a class="item" href="g4.html">
+        <strong>G4 · Grade de cartões responsiva</strong>
+        <span>3 → 2 → 1 coluna usando media queries.</span>
+      </a>
+      <a class="item" href="g5.html">
+        <strong>G5 · Áreas nomeadas</strong>
+        <span>Desenhe o layout com <code>grid-template-areas</code>.</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

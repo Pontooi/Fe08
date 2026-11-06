@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missões Flexbox — Tema 08</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    .hub { max-width: 960px; margin: 0 auto; }
+    .hub h1 { color: #fff; font-size: 1.5rem; margin-bottom: 6px; }
+    .hub .sub { color: #fed7aa; margin-bottom: 20px; font-size: .95rem; }
+    .hub .lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .hub .item {
+      display: block;
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      text-decoration: none;
+      color: #0f172a;
+      box-shadow: 0 10px 26px rgba(0,0,0,.24);
+      border-left: 6px solid #ea580c;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .hub .item:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(0,0,0,.32); }
+    .hub .item strong { display: block; color: #c2410c; margin-bottom: 4px; }
+    .hub .item span { font-size: .86rem; color: #475569; }
+  </style>
+</head>
+<body class="p-hub">
+  <div class="hub">
+    <h1>🛠 Missões Flexbox</h1>
+    <p class="sub">Cinco componentes do dia a dia. Abra cada um na ordem.</p>
+
+    <div class="lista">
+      <a class="item" href="f1.html">
+        <strong>F1 · Itens em uma linha</strong>
+        <span>Três elementos lado a lado com <code>display: flex</code> e <code>gap</code>.</span>
+      </a>
+      <a class="item" href="f2.html">
+        <strong>F2 · Menu logo + links</strong>
+        <span>Logo à esquerda e links à direita com <code>justify-content: space-between</code>.</span>
+      </a>
+      <a class="item" href="f3.html">
+        <strong>F3 · Cartões com quebra</strong>
+        <span><code>flex-wrap: wrap</code> + <code>flex: 1 1 220px</code>.</span>
+      </a>
+      <a class="item" href="f4.html">
+        <strong>F4 · Botão no rodapé</strong>
+        <span>Empurre o botão para o fundo com <code>margin-top: auto</code>.</span>
+      </a>
+      <a class="item" href="f5.html">
+        <strong>F5 · Botões centralizados</strong>
+        <span><code>justify-content</code> + <code>align-items</code> + <code>gap</code>.</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

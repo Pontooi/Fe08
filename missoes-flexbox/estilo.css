@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 12% 8%, #7c2d12 0%, #0b1120 60%);
+  color: #0f172a;
+  min-height: 100vh;
+  line-height: 1.6;
+  padding: 24px 14px 60px;
+}
+
+.topo-missao {
+  max-width: 960px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #ffedd5;
+}
+
+.topo-missao a {
+  color: #fdba74;
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid #334155;
+  padding: 7px 14px;
+  border-radius: 30px;
+  transition: all .2s ease;
+}
+
+.topo-missao a:hover {
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+}
+
+.topo-missao .etiqueta {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #fed7aa;
+}
+
+.conteudo-missao {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px 22px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .28);
+}
+
+.conteudo-missao h1 {
+  color: #c2410c;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.conteudo-missao .objetivo {
+  color: #64748b;
+  font-size: .92rem;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================
+   F1 — alinhar itens em uma linha
+   ========================================================== */
+.p-f1 .linha {
+  display: flex;
+  gap: 10px;
+}
+
+.p-f1 .linha > div {
+  flex: 1;
+  background: #ea580c;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 28px 12px;
+  border-radius: 10px;
+}
+
+/* ==========================================================
+   F2 — menu com logo à esquerda e links à direita
+   ========================================================== */
+.p-f2 .topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #1e293b;
+  color: #f8fafc;
+  border-radius: 12px;
+}
+
+.p-f2 .topo .logo {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fdba74;
+  letter-spacing: .5px;
+}
+
+.p-f2 .topo .links {
+  display: flex;
+  gap: 18px;
+}
+
+.p-f2 .topo .links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+
+.p-f2 .topo .links a:hover {
+  color: #fdba74;
+}
+
+@media (max-width: 520px) {
+  .p-f2 .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* ==========================================================
+   F3 — cartões que quebram linha automaticamente
+   ========================================================== */
+.p-f3 .lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.p-f3 .cartao {
+  flex: 1 1 220px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.p-f3 .cartao h2 {
+  font-size: 1rem;
+  color: #c2410c;
+  margin-bottom: 6px;
+}
+
+.p-f3 .cartao p {
+  font-size: .9rem;
+  color: #475569;
+}
+
+/* ==========================================================
+   F4 — cartão com botão sempre no rodapé
+   ========================================================== */
+.p-f4 .cartao {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  max-width: 360px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.p-f4 .cartao h3 {
+  font-size: 1.05rem;
+  color: #c2410c;
+  margin-bottom: 8px;
+}
+
+.p-f4 .cartao p {
+  font-size: .9rem;
+  color: #475569;
+}
+
+.p-f4 .cartao button {
+  margin-top: auto;
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.p-f4 .cartao button:hover {
+  background: #c2410c;
+}
+
+/* ==========================================================
+   F5 — grupo de botões centralizados
+   ========================================================== */
+.p-f5 .grupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 24px;
+  background: #fff7ed;
+  border: 1px dashed #fdba74;
+  border-radius: 10px;
+}
+
+.p-f5 .grupo button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: .92rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.p-f5 .grupo button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.p-f5 .grupo .confirmar {
+  background: #16a34a;
+}
+
+.p-f5 .grupo .cancelar {
+  background: #64748b;
+}
+
+.p-f5 .grupo .excluir {
+  background: #dc2626;
+}

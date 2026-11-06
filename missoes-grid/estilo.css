@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 12% 8%, #1e3a8a 0%, #0b1120 60%);
+  color: #0f172a;
+  min-height: 100vh;
+  line-height: 1.6;
+  padding: 24px 14px 60px;
+}
+
+.topo-missao {
+  max-width: 960px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #dbeafe;
+}
+
+.topo-missao a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid #334155;
+  padding: 7px 14px;
+  border-radius: 30px;
+  transition: all .2s ease;
+}
+
+.topo-missao a:hover {
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+}
+
+.topo-missao .etiqueta {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #fed7aa;
+}
+
+.conteudo-missao {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px 22px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .28);
+}
+
+.conteudo-missao h1 {
+  color: #1d4ed8;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.conteudo-missao .objetivo {
+  color: #64748b;
+  font-size: .92rem;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================
+   G1 — duas colunas iguais
+   ========================================================== */
+.p-g1 .grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.p-g1 .caixa {
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 32px 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, .28);
+}
+
+/* ==========================================================
+   G2 — proporções 1fr 2fr
+   ========================================================== */
+.p-g2 .grade {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+}
+
+.p-g2 .caixa {
+  background: #ea580c;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 32px 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(234, 88, 12, .28);
+}
+
+.p-g2 .nota {
+  margin-top: 16px;
+  background: #ffedd5;
+  border-left: 4px solid #ea580c;
+  color: #7c2d12;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: .9rem;
+}
+
+/* ==========================================================
+   G3 — cabeçalho, conteúdo e rodapé
+   ========================================================== */
+body.p-g3 {
+  padding: 0;
+}
+
+.p-g3 .pagina {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  min-height: 100vh;
+  padding: 12px;
+}
+
+.p-g3 .pagina header {
+  background: #2563eb;
+  color: #fff;
+  padding: 22px 18px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.p-g3 .pagina main {
+  background: #eff6ff;
+  color: #1e3a8a;
+  padding: 22px 18px;
+  border-radius: 10px;
+}
+
+.p-g3 .pagina footer {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ==========================================================
+   G4 — grade de cartões responsiva
+   ========================================================== */
+.p-g4 .grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.p-g4 .cartao {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #2563eb;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+.p-g4 .cartao h2 {
+  font-size: 1rem;
+  color: #1d4ed8;
+  margin-bottom: 6px;
+}
+
+.p-g4 .cartao p {
+  font-size: .9rem;
+  color: #475569;
+}
+
+@media (min-width: 600px) {
+  .p-g4 .grade {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .p-g4 .grade {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================
+   G5 — layout com áreas nomeadas
+   ========================================================== */
+.p-g5 .pagina {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "cab cab cab"
+    "menu main lado"
+    "pe   pe   pe";
+  gap: 10px;
+  min-height: 480px;
+}
+
+.p-g5 .pagina > * {
+  padding: 16px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.p-g5 .cab {
+  grid-area: cab;
+  background: #1d4ed8;
+}
+
+.p-g5 .menu {
+  grid-area: menu;
+  background: #2563eb;
+}
+
+.p-g5 .main {
+  grid-area: main;
+  background: #3b82f6;
+  font-weight: 500;
+}
+
+.p-g5 .lado {
+  grid-area: lado;
+  background: #60a5fa;
+  color: #0f172a;
+}
+
+.p-g5 .pe {
+  grid-area: pe;
+  background: #1e293b;
+}
